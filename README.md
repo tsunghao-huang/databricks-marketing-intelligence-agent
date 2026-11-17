@@ -139,15 +139,29 @@ or quantitative results.
 
 ### Identifying Campaigns Requiring Attention
 
-![Agent campaign analysis](screenshots/agent_campaign_attention.png)
+The agent interprets the business question, selects the appropriate Unity Catalog
+function, and determines the required parameter (`max_campaigns = 3`).
+
+![Agent tool selection and function call](screenshots/agent_campaign_attention_1.jpeg)
+
+The tool returns the three lowest-performing campaigns. The agent then translates
+the structured results into a concise business explanation and suggested actions.
+
+![Agent campaign analysis](screenshots/agent_campaign_attention_2.jpeg)
 
 ### Country-Specific Analysis
 
-![Country analysis](screenshots/agent_country_performance.png)
+For country-specific questions, the agent selects `get_country_performance` and
+extracts the country from the natural-language request.
+
+![Country-specific tool call and analysis](screenshots/agent_country_performance.png)
 
 ### Agent Tools
 
-![Agent tools](screenshots/agent_tools.png)
+The Databricks AI Playground agent is configured with three Unity Catalog functions
+for campaign, channel, and country-level analysis.
+
+![Databricks Unity Catalog agent tools](screenshots/agent_tools.png)
 
 ## Evaluation
 
